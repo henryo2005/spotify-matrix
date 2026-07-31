@@ -521,7 +521,7 @@ def run(args: argparse.Namespace) -> None:
         render_preview_frames(args.preview_frames)
         return
 
-    load_dotenv()
+    load_dotenv(Path(__file__).with_name(".env"))
 
     client_id = os.environ.get("SPOTIFY_CLIENT_ID")
     client_secret = os.environ.get("SPOTIFY_CLIENT_SECRET")
